@@ -9,33 +9,14 @@ import org.slf4j.LoggerFactory;
 
 import com.peachBro.teammaker.login.vo.LoginVO;
 
-/**
- * @Class Name : SessionManageAdminUtil.java
- * @Description : °ü¸®ÀÚ¼¼¼Ç°ü¸®
- * @author DGU
- * @½Ã½ºÅÛ µ¿±¹´ëÇĞ±³ ICIP
- * @since 2019. 3. 7.
- * @version 1.0
-
- * @Copyright ¨Ï 2019 Dongguk Univ., All Rights Reserved.
- *
- *            <pre>
- * ------------------------------------------------------------------
- * Modification Information
- * ------------------------------------------------------------------
- *   ¼öÁ¤ÀÏ             ¼öÁ¤ÀÚ         ¼öÁ¤³»¿ë
- * ------------------------------------------------------------------
- *  2019. 3. 7.		DGU         ½Å±Ô»ı¼º
- * </pre>
- */
 public class SessionManageUtil {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SessionManageUtil.class);
     /**
-     * ¼¼¼Ç¿¡ ·Î±×ÀÎÁ¤º¸¸¦ ¼³Á¤ÇÑ´Ù.
+     * ì„¸ì…˜ì— ë¡œê·¸ì¸ì •ë³´ë¥¼ ì„¤ì •í•œë‹¤.
      *
      * @param request HttpServletRequest
-     * @param loginVO ·Î±×ÀÎÁ¤º¸
+     * @param loginVO ë¡œê·¸ì¸ì •ë³´
      */
     public static void setLoginInfo(HttpServletRequest request, LoginVO loginvo) {
         HttpSession session = request.getSession(true);
@@ -45,10 +26,10 @@ public class SessionManageUtil {
         }
     }
     /**
-     * ¼¼¼Ç¿¡¼­ ·Î±×ÀÎÁ¤º¸¸¦ °¡Á®¿Â´Ù.
+     * ì„¸ì…˜ì—ì„œ ë¡œê·¸ì¸ì •ë³´ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
      *
      * @param request HttpServletRequest
-     * @return ·Î±×ÀÎÁ¤º¸
+     * @return ë¡œê·¸ì¸ì •ë³´
      */
     public static LoginVO getLoginInfo(HttpServletRequest request ) {
     	LoginVO loginvo = null;
@@ -62,10 +43,10 @@ public class SessionManageUtil {
         return loginvo;
     }
     /**
-     * ¼¼¼Ç¿¡ LoginInfoVO°¡ Á¸ÀçÇÏ´ÂÁö Ã¼Å©
+     * ì„¸ì…˜ì— LoginInfoVOê°€ ì¡´ì¬í•˜ëŠ”ì§€ ì²´í¬
      *
      * @param request HttpServletRequest
-     * @return true: ·Î±×ÀÎµÈ°æ¿ì, false: ·Î±×¾Æ¿ôµÈ°æ¿ì
+     * @return true: ë¡œê·¸ì¸ëœê²½ìš°, false: ë¡œê·¸ì•„ì›ƒëœê²½ìš°
      */
     public static boolean isValidSession(HttpServletRequest request) {
         boolean isValid = false;
