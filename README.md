@@ -4,6 +4,8 @@ SW비즈니스와 창업 수업 프로젝트 웹 서비스 구현
 SW 비즈니스와 창업 수업 프로젝트의 일환으로 웹 서비스 TeamMaker의 데모를 구현하였다.
 짧은 시간동안 구현한 결과물이기 때문에 기본 기능만을 가지고 있으나 추후에 발전시킬 예정
 
+![demo1](./images/demo1.png)
+
 개발환경 : eclipse 2018.09, tomcat 8.5, maven 3.6, jdk 1.8, Oracle 11g Express
 
 Spring framework 환경에서 MVC패턴으로 구현
