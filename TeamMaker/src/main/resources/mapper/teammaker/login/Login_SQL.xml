@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peachBro.teammaker.login.dao.LoginDAO">
+	<select id="joinUser" parameterType="loginVO" resultType="loginVO">
+		INSERT INTO USERS (
+			userId,
+			password,
+			userName,
+			eMail,
+			phoneNum,
+			introduce
+		) VALUES (
+			#{userId},
+			#{password},
+			#{userName},
+			#{eMail},
+			#{phoneNum},
+			#{introduce}
+		)
+	</select>
+	
+	<select id="checkUser" parameterType="loginVO" resultType="loginVO">
+		SELECT 
+			userId 
+		FROM 
+			USERS 
+		WHERE 
+			userId = #{userId}
+	</select>
+	
+	<select id="loginUser" parameterType="loginVO" resultType="loginVO">
+		SELECT 
+			*
+		FROM 
+			USERS
+		WHERE 
+			userId = #{userId}
+	</select>
+	
+	
+</mapper>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+ 
+<tiles-definitions>
+ 
+    <!-- default tiles 설정 -->
+    <definition name="default" template="/WEB-INF/jsp/views/templates/default_template.jsp">
+        <put-attribute name="title"   value="/WEB-INF/jsp/views/layouts/default_layouts/title.jsp" />
+        <put-attribute name="top"   value="/WEB-INF/jsp/views/layouts/default_layouts/top.jsp" />
+        <put-attribute name="menu"   value="/WEB-INF/jsp/views/layouts/default_layouts/menu.jsp" />
+        <put-attribute name="left"   value="/WEB-INF/jsp/views/layouts/default_layouts/left.jsp" />
+        <put-attribute name="body"   value="/WEB-INF/jsp/views/layouts/default_layouts/body.jsp" />
+        <put-attribute name="footer"   value="/WEB-INF/jsp/views/layouts/default_layouts/footer.jsp" />
+    </definition>
+    
+     <!-- login tiles 설정 -->
+    <definition name="login" template="/WEB-INF/jsp/views/templates/login_template.jsp">
+        <put-attribute name="body"   value="/WEB-INF/jsp/views/layouts/default_layouts/body.jsp" />
+        <put-attribute name="footer"   value="/WEB-INF/jsp/views/layouts/default_layouts/footer.jsp" />
+    </definition>
+    
+     <!-- myinfo tiles 설정 -->
+    <definition name="myinfo" template="/WEB-INF/jsp/views/templates/myinfo_template.jsp">
+        <put-attribute name="title"   value="/WEB-INF/jsp/views/layouts/default_layouts/title.jsp" />
+        <put-attribute name="top"   value="/WEB-INF/jsp/views/layouts/default_layouts/top.jsp" />
+        <put-attribute name="menu"   value="/WEB-INF/jsp/views/layouts/default_layouts/menu.jsp" />
+        <put-attribute name="left"   value="/WEB-INF/jsp/views/layouts/left_layouts/myinfo_left.jsp" />
+        <put-attribute name="body"   value="/WEB-INF/jsp/views/layouts/default_layouts/body.jsp" />
+        <put-attribute name="footer"   value="/WEB-INF/jsp/views/layouts/default_layouts/footer.jsp" />
+    </definition>
+    
+     <!-- search tiles 설정 -->
+    <definition name="search" template="/WEB-INF/jsp/views/templates/search_template.jsp">
+        <put-attribute name="title"   value="/WEB-INF/jsp/views/layouts/default_layouts/title.jsp" />
+        <put-attribute name="top"   value="/WEB-INF/jsp/views/layouts/default_layouts/top.jsp" />
+        <put-attribute name="menu"   value="/WEB-INF/jsp/views/layouts/default_layouts/menu.jsp" />
+        <put-attribute name="left"   value="/WEB-INF/jsp/views/layouts/left_layouts/search_left.jsp" />
+        <put-attribute name="body"   value="/WEB-INF/jsp/views/layouts/default_layouts/body.jsp" />
+        <put-attribute name="footer"   value="/WEB-INF/jsp/views/layouts/default_layouts/footer.jsp" />
+    </definition>
+    
+      <!-- guide tiles 설정 -->
+    <definition name="guide" template="/WEB-INF/jsp/views/templates/guide_template.jsp">
+        <put-attribute name="title"   value="/WEB-INF/jsp/views/layouts/default_layouts/title.jsp" />
+        <put-attribute name="top"   value="/WEB-INF/jsp/views/layouts/default_layouts/top.jsp" />
+        <put-attribute name="menu"   value="/WEB-INF/jsp/views/layouts/default_layouts/menu.jsp" />
+        <put-attribute name="left"   value="/WEB-INF/jsp/views/layouts/left_layouts/guide_left.jsp" />
+        <put-attribute name="body"   value="/WEB-INF/jsp/views/layouts/default_layouts/body.jsp" />
+        <put-attribute name="footer"   value="/WEB-INF/jsp/views/layouts/default_layouts/footer.jsp" />
+    </definition>
+    
+    <!-- default body tiles 설정 -->
+     <definition name="/main/*" extends="default">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/main/{1}.jsp" />
+    </definition>    
+
+    <definition name="/main/*/*" extends="default">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/main/{1}/{2}.jsp" />
+    </definition>
+    
+     <!-- login body tiles 설정 -->
+     <definition name="/login/*" extends="login">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/login/{1}.jsp" />
+    </definition>    
+
+    <definition name="/login/*/*" extends="login">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/login/{1}/{2}.jsp" />
+    </definition>
+    
+    <!-- myinfo body tiles 설정 -->
+     <definition name="/myinfo/*" extends="myinfo">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/myinfo/{1}.jsp" />
+    </definition>    
+
+    <definition name="/myinfo/*/*" extends="myinfo">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/myinfo/{1}/{2}.jsp" />
+    </definition>        
+    
+     <!-- search body tiles 설정 -->
+     <definition name="/search/*" extends="search">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/search/{1}.jsp" />
+    </definition>    
+
+    <definition name="/search/*/*" extends="search">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/search/{1}/{2}.jsp" />
+    </definition> 
+    
+    <!-- guide body tiles 설정 -->
+     <definition name="/guide/*" extends="guide">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/guide/{1}.jsp" />
+    </definition>    
+
+    <definition name="/guide/*/*" extends="guide">
+        <put-attribute name="body" value="/WEB-INF/jsp/teammaker/guide/{1}/{2}.jsp" />
+    </definition>   
+</tiles-definitions>

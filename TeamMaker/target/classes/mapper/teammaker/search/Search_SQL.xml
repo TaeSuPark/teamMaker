@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peachBro.teammaker.search.dao.SearchDAO">
+	<select id="contestList_A" parameterType="searchVO" resultType="searchVO">
+		SELECT 
+			* 
+		FROM 
+			CONTESTS 
+		WHERE 
+			contestField = 0
+	</select>
+	
+	<select id="contestList_B" parameterType="searchVO" resultType="searchVO">
+		SELECT 
+			* 
+		FROM 
+			CONTESTS 
+		WHERE 
+			contestField = 1
+	</select>
+	
+	<select id="contestDetail" parameterType="searchVO" resultType="searchVO">
+		SELECT 
+			* 
+		FROM 
+			CONTESTS 
+		WHERE 
+			contestId = #{contestId}
+	</select>
+</mapper>
