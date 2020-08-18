@@ -25,9 +25,9 @@ Package Explorer로 보는 것을 추천, 이를 기반으로 설명한다.
 src/main/java는 크게 5가지 기능으로 나뉨
 
 1. cmm
- 1) logger.LoggerInterceptor.java
+ 2. logger.LoggerInterceptor.java
  전처리, 후처리(prehandle, posthandle)을 사용하기 위한 인터셉터 파일.
- 2) session.SessionManageUtil.java
+ 3. session.SessionManageUtil.java
 세션과 관련된 기능을 모아놓은 java 파일.
 
 <!-- -------------------------------------------------------------------------------------------------------- -->
@@ -43,19 +43,19 @@ src/main/java는 크게 5가지 기능으로 나뉨
  한꺼번에 처리해서 Controller단에서 할 필요가 없다.
  (즉, Service에서는 없는 기능이지만 DAO에는 있는 기능이 있어 하나의 Service에 2개의 DAO 메소드를 사용(쿼리문 2개 사용)
 
-2. login
+1. login
 로그인 및 회원가입과 관련된 부분
 
-3. main
-메인 화면에서 searchVO의 데이터를 사용하기 때문에 이부분에 주의할 것
+2. main
+메인 화면에서 searchVO의 데이터를 사용하기 때문에 이부분에 주의
 
-4. myinfo
+3. myinfo
 내 정보/커리어카드 관리 부분
 
-5. search
+4. search
 공모전 목록을 띄워주는 구현부분
 
-6. guide(미구현)
+5. guide(미구현)
 서비스 가이드와 개요를 소개하고 안내하는 부분
 
-java/main/resource와 jsp 부분도 위와 같은 단위로 파일을 나누어 구현했기 때문에 보면 충분히 이해할 수 있을 것
+java/main/resource와 jsp 부분도 위와 같은 단위로 파일을 나누어 구현 
